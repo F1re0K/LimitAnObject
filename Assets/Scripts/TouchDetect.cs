@@ -7,7 +7,7 @@ public class TouchDetect : MonoBehaviour, IPointerDownHandler
 {
     public void OnPointerDown(PointerEventData eventData)
     {
-        GameManager.Instanse.AmountObjectInScene++;
+        GameManager.Instanse.Score++;
         Destroy(gameObject);
     }
 }

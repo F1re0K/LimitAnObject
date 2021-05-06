@@ -13,24 +13,24 @@ public class GameManager : MonoBehaviour
     }
 
     public GameObject textScoreUI;
-    private int amountObjectInScene = 0;
+    private int score = 0;
     public int timerCount = 0;
     public float deltaSpawnPeriod = 0.15F;
 
-    public int AmountObjectInScene 
+    public int Score 
     {
-        get => amountObjectInScene;
+        get => score;
         set
         {
             if (value < 0)
             {
-                amountObjectInScene = 0;
+                score = 0;
             }
             else
             {
-                amountObjectInScene = value;
+                score = value;
             }
-            textScoreUI.GetComponent<Text>().text = amountObjectInScene.ToString();
+            textScoreUI.GetComponent<Text>().text = score.ToString();
         }
     }
 
