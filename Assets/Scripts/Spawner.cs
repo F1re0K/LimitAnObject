@@ -16,7 +16,7 @@ public class Spawner : MonoBehaviour
     public void StartSpawn()
     {
         Instantiate(coockie1 , new Vector2(Random.Range(-1.72F, 1.72F),Random.Range(-4.15F, 4.15F)),Quaternion.identity) ;
-        
+        GameManager.Instanse.AmountObjectInScene++;
     }
     public IEnumerator CustomUpdate()
     {

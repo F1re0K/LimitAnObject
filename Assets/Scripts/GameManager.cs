@@ -17,6 +17,30 @@ public class GameManager : MonoBehaviour
     public int timerCount = 0;
     public float deltaSpawnPeriod = 0.15F;
 
+    [SerializeField] private int amountObjectInScene = 0;
+
+    public int AmountObjectInScene
+    {
+        get => amountObjectInScene;
+        set
+        {
+            if (value < 0)
+            {
+                amountObjectInScene = 0;
+                Debug.LogError("Кол-во объектов на сцене попыталось быть меньше нуля");
+            }
+            else
+            {
+                amountObjectInScene = value;
+            }
+
+            if (amountObjectInScene >= 15)
+            {
+                GameOver.Instanse.ShowGameOver();
+            }
+        }
+    }
+
     public int Score 
     {
         get => score;

@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class GameOver : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static GameOver Instanse;
+    public GameObject gameOverDisplay;
+
+    public GameOver()
     {
+        Instanse = this;
+    }
+
+    public void ShowGameOver()
+    {
+        gameOverDisplay.SetActive(true);
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void GameOverNow()
     {
-        
+
     }
 }
