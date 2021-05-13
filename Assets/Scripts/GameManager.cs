@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public GameObject textScoreUI;
     private int score = 0;
     public int timerCount = 0;
-    public float deltaSpawnPeriod = 0.15F;
+    public float deltaSpawnPeriod = 0.1F;
 
     [SerializeField] private int amountObjectInScene = 0;
 
