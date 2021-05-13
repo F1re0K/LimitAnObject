@@ -5,8 +5,8 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public GameObject coockie1;
-    private float initDeltaSpawn = 0.6F;
-    public float deltaSpawn = 0.6F;
+    private float initDeltaSpawn = 0.85F;
+    public float deltaSpawn = 0.85F;
 
     public void Start()
     {
