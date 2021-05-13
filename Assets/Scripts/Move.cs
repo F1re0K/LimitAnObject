@@ -21,7 +21,7 @@ public class Move : MonoBehaviour
     private void Start()
     {
         GenerateRandomPoint();
-        speed = Random.Range(2, 10);
+        speed = Random.Range(2, 6);
     }
 
     private void FixedUpdate()

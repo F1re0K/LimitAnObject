@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public float deltaSpawnPeriod = 0.1F;
 
     [SerializeField] private int amountObjectInScene = 0;
+    private bool touchDetectActive;
 
     public int AmountObjectInScene
     {
@@ -58,5 +59,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    
+    public bool TouchDetectActive
+    {
+        get => touchDetectActive;
+        set
+        {
+            touchDetectActive = value;
+        }
+    }
+
+    private void Start()
+    {
+        Time.timeScale = 1;
+        touchDetectActive = true;
+    }
 }

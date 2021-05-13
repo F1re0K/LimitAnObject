@@ -5,8 +5,14 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public GameObject coockie1;
-    private float initDeltaSpawn = 0.85F;
-    public float deltaSpawn = 0.85F;
+    private float initDeltaSpawn;
+    public float deltaSpawn;
+
+    private void Awake()
+    {
+        deltaSpawn = 0.55F;
+        initDeltaSpawn = deltaSpawn;
+    }
 
     public void Start()
     {
@@ -36,7 +42,7 @@ public class Spawner : MonoBehaviour
             GameManager.Instanse.timerCount++;
 
 
-            if (deltaSpawn > 0.1) deltaSpawn = initDeltaSpawn - CalculateTime();
+            if (deltaSpawn > 0.25) deltaSpawn = initDeltaSpawn - CalculateTime();
         }
     }
 
@@ -45,10 +51,11 @@ public class Spawner : MonoBehaviour
     /// </summary>
     private float CalculateTime()
     {
-        float reductionCoefficientTime = GameManager.Instanse.timerCount / 5;
+        float reductionCoefficientTime = GameManager.Instanse.timerCount / 10;
         Mathf.Floor(reductionCoefficientTime);
 
         float result = GameManager.Instanse.deltaSpawnPeriod * reductionCoefficientTime;
         return result;
+        
     }
 }

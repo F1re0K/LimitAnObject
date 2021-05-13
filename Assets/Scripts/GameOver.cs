@@ -18,11 +18,12 @@ public class GameOver : MonoBehaviour
     {
         gameOverDisplay.SetActive(true);
         Time.timeScale = 0;
+        GameManager.Instanse.TouchDetectActive = false;
     }
 
     public void GameOverNow()
     {
-        Debug.Log("Работвает");
+        Time.timeScale = 1;
         SceneManager.LoadScene("SampleScene");
     }
 }

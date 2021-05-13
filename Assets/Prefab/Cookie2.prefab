@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5430338363790284020}
   - component: {fileID: 5430338363790284023}
   - component: {fileID: 5430338363790284022}
-  - component: {fileID: 5430338363790284018}
   - component: {fileID: 5430338363790284019}
+  - component: {fileID: 6332373142476312097}
   m_Layer: 0
   m_Name: Cookie2
   m_TagString: Untagged
@@ -121,36 +121,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   randomPoint: {x: 0, y: 0}
   direction: {x: 0, y: 0}
---- !u!60 &5430338363790284018
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5430338363790284025}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.18, y: 3.47}
-    newSize: {x: 3.18, y: 3.47}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.81588775, y: 0.55476695}
-      - {x: -1.3475567, y: -1.1594496}
-      - {x: 1.4889342, y: -1.1727607}
-      - {x: 0.9994559, y: 0.38207084}
-      - {x: 0.053334475, y: 1.4162107}
 --- !u!114 &5430338363790284019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,3 +133,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72e18a89ec9d5e747a469af1e71e30ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!70 &6332373142476312097
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5430338363790284025}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.07, y: -0.07}
+  m_Size: {x: 3.15, y: 1.78}
+  m_Direction: 0
